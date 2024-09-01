@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "onetimesecret"
+version = "0.1.0"
+description = ""
+authors = ["Viktor Bagrov <Keramogranitus@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.112.2"
+beanie = "^1.26.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
