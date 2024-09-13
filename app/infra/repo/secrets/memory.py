@@ -3,8 +3,7 @@ from ..base import BaseSecretsRepo
 
 
 class MemorySecretsRepository(BaseSecretsRepo[Secret]):
-    def __init__(self):
-        self._memory : list[Secret] = []
+    _memory : list[Secret] = []
         
     async def create(self, secret: Secret):
         self._memory.append(secret)

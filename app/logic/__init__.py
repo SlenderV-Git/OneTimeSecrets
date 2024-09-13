@@ -1,5 +1,5 @@
-from .protected_secrets import ProtectSecretService
-from .secrets import SecretService
+from .services.protected_secrets import ProtectSecretService
+from .services.secrets import SecretService
 
 __all__ = (
     ProtectSecretService,

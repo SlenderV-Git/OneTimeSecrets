@@ -5,8 +5,10 @@ from .base import BaseSecretService
 
 
 class ProtectSecretService(BaseSecretService[BaseSecretsRepo, ProtectedSecret]):
+    repository : BaseSecretsRepo
+    
     async def create(self, secret: ProtectedSecret) -> None:
-        await self._repository.create(secret=secret)
+        await self.repository.create(secret=secret)
     
     async def get(self, secret_key : str, password : str) -> ProtectedSecret:
-        return await self._repository.get(secret_key, password)
+        return await self.repository.get(secret_key, password)
